@@ -1,2 +1,2 @@
 #!/bin/bash
-mv -rf /tmp/betty touch/tmp/betty;rm -rf/tmp/my_first_directory
+mv -rf /tmp/betty touch/tmp/betty;

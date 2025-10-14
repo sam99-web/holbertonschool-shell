@@ -1,3 +1,6 @@
 #!/bin/bash
 cd -
+fr vi:
+Esc
+:set number
 

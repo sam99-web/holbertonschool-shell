@@ -1,2 +1,0 @@
-#Holberton
-Voici le README

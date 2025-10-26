@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$PATH" | tr ':' '\n' | while read dir; do [ -d "$dir" ] && c=$((c+1)); done; echo $c
+count=0; for dir in $(echo "$PATH" | tr ':' ' '); do if [ -d "$dir" ]; then count=$((count+1)); fi; done; echo $count

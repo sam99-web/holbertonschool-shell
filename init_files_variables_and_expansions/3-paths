@@ -1,0 +1,13 @@
+#!/bin/bash
+count=0
+
+# Séparer le PATH par ":" et parcourir chaque élément
+IFS=':'
+for dir in $PATH; do
+	if [ -d "$dir" ]; then
+		count=$((count + 1))
+	fi
+done
+unset IFS
+
+echo $count

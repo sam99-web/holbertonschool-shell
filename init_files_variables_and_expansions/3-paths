@@ -1,2 +1,18 @@
 #!/bin/bash
-c=0; for d in $(echo "$PATH" | tr ':' ' '); do if [ -d "$d" ]; then c=$((c+1)); fi; done; echo $c
+# count_path_dirs.sh
+# Counts the number of directories in the PATH safely, even if they contain spaces
+
+# Initialize counter
+count=0
+
+# Replace ':' with newline, then read each directory
+echo "$PATH" | tr ':' '\n' | while read -r dir
+do
+	if [ -d "$dir" ]
+	then
+		count=$((count + 1))
+	fi
+done
+
+# Print the result
+echo "$count"
